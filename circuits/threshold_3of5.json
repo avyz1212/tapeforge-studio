@@ -1,0 +1,353 @@
+{
+  "format": "tapeforge-netlist/1",
+  "name": "threshold_3of5",
+  "blurb": "3-of-5 approval policy: pays out / unlocks only when at least 3 of 5 signers agree — governance as a circuit.",
+  "inputs": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "outputs": [
+    "approved"
+  ],
+  "outputNets": {
+    "approved": "n40"
+  },
+  "gates": [
+    {
+      "type": "NAND",
+      "in": [
+        "v0",
+        "v1"
+      ],
+      "out": "n0"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v0",
+        "n0"
+      ],
+      "out": "n1"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v1",
+        "n0"
+      ],
+      "out": "n2"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n1",
+        "n2"
+      ],
+      "out": "n3"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "v2"
+      ],
+      "out": "n4"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "n4"
+      ],
+      "out": "n5"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v2",
+        "n4"
+      ],
+      "out": "n6"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n5",
+        "n6"
+      ],
+      "out": "n7"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v0",
+        "v1"
+      ],
+      "out": "n8"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n8",
+        "n8"
+      ],
+      "out": "n9"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "v2"
+      ],
+      "out": "n10"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n10",
+        "n10"
+      ],
+      "out": "n11"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n9",
+        "n9"
+      ],
+      "out": "n12"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n11",
+        "n11"
+      ],
+      "out": "n13"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n12",
+        "n13"
+      ],
+      "out": "n14"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v3",
+        "v4"
+      ],
+      "out": "n15"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v3",
+        "n15"
+      ],
+      "out": "n16"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v4",
+        "n15"
+      ],
+      "out": "n17"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n16",
+        "n17"
+      ],
+      "out": "n18"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n7"
+      ],
+      "out": "n19"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n19"
+      ],
+      "out": "n20"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n7",
+        "n19"
+      ],
+      "out": "n21"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n20",
+        "n21"
+      ],
+      "out": "n22"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "v3",
+        "v4"
+      ],
+      "out": "n23"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n23",
+        "n23"
+      ],
+      "out": "n24"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n7"
+      ],
+      "out": "n25"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n25",
+        "n25"
+      ],
+      "out": "n26"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n24",
+        "n24"
+      ],
+      "out": "n27"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n26",
+        "n26"
+      ],
+      "out": "n28"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n27",
+        "n28"
+      ],
+      "out": "n29"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n14",
+        "n29"
+      ],
+      "out": "n30"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n14",
+        "n30"
+      ],
+      "out": "n31"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n29",
+        "n30"
+      ],
+      "out": "n32"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n31",
+        "n32"
+      ],
+      "out": "n33"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n14",
+        "n29"
+      ],
+      "out": "n34"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n34",
+        "n34"
+      ],
+      "out": "n35"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n33",
+        "n22"
+      ],
+      "out": "n36"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n36",
+        "n36"
+      ],
+      "out": "n37"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n35",
+        "n35"
+      ],
+      "out": "n38"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n37",
+        "n37"
+      ],
+      "out": "n39"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n38",
+        "n39"
+      ],
+      "out": "n40"
+    }
+  ],
+  "census": {
+    "nand": 41,
+    "latch": 0,
+    "total": 41
+  }
+}

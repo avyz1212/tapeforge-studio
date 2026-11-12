@@ -1,0 +1,517 @@
+{
+  "format": "tapeforge-netlist/1",
+  "name": "adder4",
+  "blurb": "4-bit ripple-carry adder with carry-in — 9 inputs, 512 rows, proven.",
+  "inputs": [
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "b0",
+    "b1",
+    "b2",
+    "b3",
+    "cin"
+  ],
+  "outputs": [
+    "s0",
+    "s1",
+    "s2",
+    "s3",
+    "carry"
+  ],
+  "outputNets": {
+    "s0": "n7",
+    "s1": "n22",
+    "s2": "n37",
+    "s3": "n52",
+    "carry": "n59"
+  },
+  "gates": [
+    {
+      "type": "NAND",
+      "in": [
+        "a0",
+        "b0"
+      ],
+      "out": "n0"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a0",
+        "n0"
+      ],
+      "out": "n1"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "b0",
+        "n0"
+      ],
+      "out": "n2"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n1",
+        "n2"
+      ],
+      "out": "n3"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "cin"
+      ],
+      "out": "n4"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "n4"
+      ],
+      "out": "n5"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "cin",
+        "n4"
+      ],
+      "out": "n6"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n5",
+        "n6"
+      ],
+      "out": "n7"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a0",
+        "b0"
+      ],
+      "out": "n8"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n8",
+        "n8"
+      ],
+      "out": "n9"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "cin"
+      ],
+      "out": "n10"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n10",
+        "n10"
+      ],
+      "out": "n11"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n9",
+        "n9"
+      ],
+      "out": "n12"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n11",
+        "n11"
+      ],
+      "out": "n13"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n12",
+        "n13"
+      ],
+      "out": "n14"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a1",
+        "b1"
+      ],
+      "out": "n15"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a1",
+        "n15"
+      ],
+      "out": "n16"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "b1",
+        "n15"
+      ],
+      "out": "n17"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n16",
+        "n17"
+      ],
+      "out": "n18"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n14"
+      ],
+      "out": "n19"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n19"
+      ],
+      "out": "n20"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n14",
+        "n19"
+      ],
+      "out": "n21"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n20",
+        "n21"
+      ],
+      "out": "n22"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a1",
+        "b1"
+      ],
+      "out": "n23"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n23",
+        "n23"
+      ],
+      "out": "n24"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n18",
+        "n14"
+      ],
+      "out": "n25"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n25",
+        "n25"
+      ],
+      "out": "n26"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n24",
+        "n24"
+      ],
+      "out": "n27"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n26",
+        "n26"
+      ],
+      "out": "n28"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n27",
+        "n28"
+      ],
+      "out": "n29"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a2",
+        "b2"
+      ],
+      "out": "n30"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a2",
+        "n30"
+      ],
+      "out": "n31"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "b2",
+        "n30"
+      ],
+      "out": "n32"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n31",
+        "n32"
+      ],
+      "out": "n33"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n33",
+        "n29"
+      ],
+      "out": "n34"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n33",
+        "n34"
+      ],
+      "out": "n35"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n29",
+        "n34"
+      ],
+      "out": "n36"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n35",
+        "n36"
+      ],
+      "out": "n37"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a2",
+        "b2"
+      ],
+      "out": "n38"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n38",
+        "n38"
+      ],
+      "out": "n39"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n33",
+        "n29"
+      ],
+      "out": "n40"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n40",
+        "n40"
+      ],
+      "out": "n41"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n39",
+        "n39"
+      ],
+      "out": "n42"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n41",
+        "n41"
+      ],
+      "out": "n43"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n42",
+        "n43"
+      ],
+      "out": "n44"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a3",
+        "b3"
+      ],
+      "out": "n45"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a3",
+        "n45"
+      ],
+      "out": "n46"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "b3",
+        "n45"
+      ],
+      "out": "n47"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n46",
+        "n47"
+      ],
+      "out": "n48"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n48",
+        "n44"
+      ],
+      "out": "n49"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n48",
+        "n49"
+      ],
+      "out": "n50"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n44",
+        "n49"
+      ],
+      "out": "n51"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n50",
+        "n51"
+      ],
+      "out": "n52"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a3",
+        "b3"
+      ],
+      "out": "n53"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n53",
+        "n53"
+      ],
+      "out": "n54"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n48",
+        "n44"
+      ],
+      "out": "n55"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n55",
+        "n55"
+      ],
+      "out": "n56"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n54",
+        "n54"
+      ],
+      "out": "n57"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n56",
+        "n56"
+      ],
+      "out": "n58"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n57",
+        "n58"
+      ],
+      "out": "n59"
+    }
+  ],
+  "census": {
+    "nand": 60,
+    "latch": 0,
+    "total": 60
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "format": "tapeforge-netlist/1",
+  "name": "xor2",
+  "blurb": "XOR built from 4 NAND gates — the hello-world of gate-level design.",
+  "inputs": [
+    "a",
+    "bb"
+  ],
+  "outputs": [
+    "y"
+  ],
+  "outputNets": {
+    "y": "n3"
+  },
+  "gates": [
+    {
+      "type": "NAND",
+      "in": [
+        "a",
+        "bb"
+      ],
+      "out": "n0"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a",
+        "n0"
+      ],
+      "out": "n1"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "bb",
+        "n0"
+      ],
+      "out": "n2"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n1",
+        "n2"
+      ],
+      "out": "n3"
+    }
+  ],
+  "census": {
+    "nand": 4,
+    "latch": 0,
+    "total": 4
+  }
+}

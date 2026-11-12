@@ -1,0 +1,119 @@
+{
+  "format": "tapeforge-netlist/1",
+  "name": "majority3",
+  "blurb": "Majority voter: masks any single faulty input — the classic fault-tolerance cell.",
+  "inputs": [
+    "a",
+    "bb",
+    "c"
+  ],
+  "outputs": [
+    "y"
+  ],
+  "outputNets": {
+    "y": "n11"
+  },
+  "gates": [
+    {
+      "type": "NAND",
+      "in": [
+        "a",
+        "bb"
+      ],
+      "out": "n0"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n0",
+        "n0"
+      ],
+      "out": "n1"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "a",
+        "c"
+      ],
+      "out": "n2"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n2",
+        "n2"
+      ],
+      "out": "n3"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n1",
+        "n1"
+      ],
+      "out": "n4"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n3",
+        "n3"
+      ],
+      "out": "n5"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n4",
+        "n5"
+      ],
+      "out": "n6"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "bb",
+        "c"
+      ],
+      "out": "n7"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n7",
+        "n7"
+      ],
+      "out": "n8"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n6",
+        "n6"
+      ],
+      "out": "n9"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n8",
+        "n8"
+      ],
+      "out": "n10"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n9",
+        "n10"
+      ],
+      "out": "n11"
+    }
+  ],
+  "census": {
+    "nand": 12,
+    "latch": 0,
+    "total": 12
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "format": "tapeforge-netlist/1",
+  "name": "counter4",
+  "blurb": "4-bit binary counter: 4 LATCHes of state, +1 per clock — sequential logic, verified over 20 cycles (wraps at 16).",
+  "inputs": [],
+  "outputs": [
+    "q0s",
+    "q1s",
+    "q2s",
+    "q3s"
+  ],
+  "outputNets": {
+    "q0s": "q0s",
+    "q1s": "q1s",
+    "q2s": "q2s",
+    "q3s": "q3s"
+  },
+  "gates": [
+    {
+      "type": "NAND",
+      "in": [
+        "q0s",
+        "1'b1"
+      ],
+      "out": "n0"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q0s",
+        "n0"
+      ],
+      "out": "n1"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "1'b1",
+        "n0"
+      ],
+      "out": "n2"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n1",
+        "n2"
+      ],
+      "out": "n3"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q0s",
+        "1'b1"
+      ],
+      "out": "n4"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n4",
+        "n4"
+      ],
+      "out": "n5"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q1s",
+        "n5"
+      ],
+      "out": "n6"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q1s",
+        "n6"
+      ],
+      "out": "n7"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n5",
+        "n6"
+      ],
+      "out": "n8"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n7",
+        "n8"
+      ],
+      "out": "n9"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q1s",
+        "n5"
+      ],
+      "out": "n10"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n10",
+        "n10"
+      ],
+      "out": "n11"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q2s",
+        "n11"
+      ],
+      "out": "n12"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q2s",
+        "n12"
+      ],
+      "out": "n13"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n11",
+        "n12"
+      ],
+      "out": "n14"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n13",
+        "n14"
+      ],
+      "out": "n15"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q2s",
+        "n11"
+      ],
+      "out": "n16"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n16",
+        "n16"
+      ],
+      "out": "n17"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q3s",
+        "n17"
+      ],
+      "out": "n18"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q3s",
+        "n18"
+      ],
+      "out": "n19"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n17",
+        "n18"
+      ],
+      "out": "n20"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n19",
+        "n20"
+      ],
+      "out": "n21"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "q3s",
+        "n17"
+      ],
+      "out": "n22"
+    },
+    {
+      "type": "NAND",
+      "in": [
+        "n22",
+        "n22"
+      ],
+      "out": "n23"
+    },
+    {
+      "type": "LATCH",
+      "d": "n3",
+      "out": "q0s"
+    },
+    {
+      "type": "LATCH",
+      "d": "n9",
+      "out": "q1s"
+    },
+    {
+      "type": "LATCH",
+      "d": "n15",
+      "out": "q2s"
+    },
+    {
+      "type": "LATCH",
+      "d": "n21",
+      "out": "q3s"
+    }
+  ],
+  "census": {
+    "nand": 24,
+    "latch": 4,
+    "total": 28
+  }
+}
