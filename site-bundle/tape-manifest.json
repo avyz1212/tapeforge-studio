@@ -1,0 +1,17 @@
+{
+  "format": "tapeforge-site-bundle/1",
+  "spec": "tape:// On-Chain Website Specification v0.2 (TapeKit SPEC.md)",
+  "fallback": "index.html",
+  "fileCount": 1,
+  "totalBytes": 2556,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 2556,
+      "sha256": "0xe8534ff7e2ad7d6d25a2bdc846c0a2a9dcb8c2eaf7e63dd9679a8a64e4664159",
+      "contentType": "text/html"
+    }
+  ],
+  "pure": true,
+  "externalRefs": []
+}
