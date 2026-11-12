@@ -1,0 +1,777 @@
+{
+  "generatedAt": "2026-11-12T18:56:22.936Z",
+  "tool": "TapeForge Studio",
+  "version": "0.1.0",
+  "lab": [
+    {
+      "name": "xor2",
+      "blurb": "XOR built from 4 NAND gates — the hello-world of gate-level design.",
+      "nand": 4,
+      "latch": 0,
+      "total": 4,
+      "check": {
+        "ok": true,
+        "rows": 4,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 4,
+          "latch": 0,
+          "total": 4
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "half_adder",
+      "blurb": "Half adder: sum and carry of two bits.",
+      "nand": 15,
+      "latch": 0,
+      "total": 15,
+      "check": {
+        "ok": true,
+        "rows": 4,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 15,
+          "latch": 0,
+          "total": 15
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "full_adder",
+      "blurb": "Full adder: the cell every arithmetic circuit is tiled from.",
+      "nand": 15,
+      "latch": 0,
+      "total": 15,
+      "check": {
+        "ok": true,
+        "rows": 8,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 15,
+          "latch": 0,
+          "total": 15
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "adder4",
+      "blurb": "4-bit ripple-carry adder with carry-in — 9 inputs, 512 rows, proven.",
+      "nand": 60,
+      "latch": 0,
+      "total": 60,
+      "check": {
+        "ok": true,
+        "rows": 512,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 60,
+          "latch": 0,
+          "total": 60
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "alu4",
+      "blurb": "4-bit ALU (ADD/SUB/AND/OR + zero flag) — a Behemoth-style arithmetic core, 1,024 rows proven.",
+      "nand": 173,
+      "latch": 0,
+      "total": 173,
+      "check": {
+        "ok": true,
+        "rows": 1024,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 173,
+          "latch": 0,
+          "total": 173
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "threshold_3of5",
+      "blurb": "3-of-5 approval policy: pays out / unlocks only when at least 3 of 5 signers agree — governance as a circuit.",
+      "nand": 41,
+      "latch": 0,
+      "total": 41,
+      "check": {
+        "ok": true,
+        "rows": 32,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 41,
+          "latch": 0,
+          "total": 41
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "majority3",
+      "blurb": "Majority voter: masks any single faulty input — the classic fault-tolerance cell.",
+      "nand": 12,
+      "latch": 0,
+      "total": 12,
+      "check": {
+        "ok": true,
+        "rows": 8,
+        "kind": "truth-table"
+      },
+      "est": {
+        "components": {
+          "nand": 12,
+          "latch": 0,
+          "total": 12
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    },
+    {
+      "name": "counter4",
+      "blurb": "4-bit binary counter: 4 LATCHes of state, +1 per clock — sequential logic, verified over 20 cycles (wraps at 16).",
+      "nand": 24,
+      "latch": 4,
+      "total": 28,
+      "check": {
+        "ok": true,
+        "rows": 20,
+        "kind": "sequence"
+      },
+      "est": {
+        "components": {
+          "nand": 24,
+          "latch": 4,
+          "total": 28
+        },
+        "tapeoutFeeRefBNB": 0.0002,
+        "note": "components are consumed at tape-out; fee is a documented BNB reference, not a quote"
+      }
+    }
+  ],
+  "lens": {
+    "processors": {
+      "xlayer": {
+        "chain": "X Layer",
+        "chainId": 196,
+        "factory": "0x1f09daefa827f02cbb40967cc91b259763760761",
+        "processors": [
+          {
+            "index": 0,
+            "address": "0x839bdd6fa7a66416a609a735e11de5411b98574e"
+          },
+          {
+            "index": 1,
+            "address": "0x0565ea48ca41ae559d8d491dbb0a9ec945db551b"
+          },
+          {
+            "index": 2,
+            "address": "0xe0ef4fffd869cbd24b2f83e6d2d83109937e05ff"
+          },
+          {
+            "index": 3,
+            "address": "0x006b107b889347dedd52019fae9daa60fce47947"
+          },
+          {
+            "index": 4,
+            "address": "0x68f65046fdeab90d8db376c27b5e6ae159d240cc"
+          },
+          {
+            "index": 5,
+            "address": "0xfd7b31b5a307b0c863772bb162e10d2eb4b7a819"
+          },
+          {
+            "index": 6,
+            "address": "0x90b3ba18c32e9e9e6ea5e2cca3e68b86afbe7cdb"
+          },
+          {
+            "index": 7,
+            "address": "0xd11e62a6231c101add91a10f6c2b406d2d1f043b"
+          },
+          {
+            "index": 8,
+            "address": "0xfd32fbaeef90726f00aafdf2d2cf3d9c6fbd6b8d"
+          },
+          {
+            "index": 9,
+            "address": "0x6a5bfc4147b3aaa23bd494789417309f8a64fd91"
+          },
+          {
+            "index": 10,
+            "address": "0x5ca58d1ee9babf7c716e55a37a6f2e780250a1ba"
+          },
+          {
+            "index": 11,
+            "address": "0xfb6c4359b3624dd58ffe3ed5d34dbade2782f843"
+          },
+          {
+            "index": 12,
+            "address": "0x10af08dc3a03076d6e58054392c357ba22873c24"
+          },
+          {
+            "index": 13,
+            "address": "0x5c44c6b4dd5ef1f5cf49bff0dc282f5d7ad2a783"
+          },
+          {
+            "index": 14,
+            "address": "0x9775618366492484d6b731ee6c8ee12c3c879cfc"
+          },
+          {
+            "index": 15,
+            "address": "0xecfcccd10a2993ad73eddda3f88a767c89508331"
+          },
+          {
+            "index": 16,
+            "address": "0xc87e52ee14a51b6ec9ddcb23a9c0aaf498515123"
+          },
+          {
+            "index": 17,
+            "address": "0xd041714faffea320cc83d769c37608b00601b76f"
+          },
+          {
+            "index": 18,
+            "address": "0x073ce99d5fe01293d539bc1c3a45434a7d1f4f85"
+          },
+          {
+            "index": 19,
+            "address": "0x9eecbef7401c4fe0515a483ddb5a995347ac7bb7"
+          },
+          {
+            "index": 20,
+            "address": "0xc3c6454ea8c5d9f1bf0fddbd3efe111d58e08d07"
+          },
+          {
+            "index": 21,
+            "address": "0x07bbcc317a7cb3574817510f49ea0999b12a5e63"
+          },
+          {
+            "index": 22,
+            "address": "0x88dfb0a852cc0af484c2f50f3e754ff351563e6a"
+          },
+          {
+            "index": 23,
+            "address": "0x4137a3c88761745642749f63d45b821abaf9c454"
+          },
+          {
+            "index": 24,
+            "address": "0x380b7b3f8e28c3d71ee1db78b6f0bf9ca914d87d"
+          },
+          {
+            "index": 25,
+            "address": "0xa78147b643d2a5e7f432d405f9f528dca3ee2aa4"
+          },
+          {
+            "index": 26,
+            "address": "0x9dc72fc28a0a1b3c378dc59b6a3192cb0c578ba4"
+          },
+          {
+            "index": 27,
+            "address": "0x2a6a6182d1cc7ed7d8e190a151381ba3fec9d79f"
+          },
+          {
+            "index": 28,
+            "address": "0xc99149860ff3987727466311930a3987968385c0"
+          },
+          {
+            "index": 29,
+            "address": "0x526b96238cc418d909005e2e2d79e327da4bd0f7"
+          },
+          {
+            "index": 30,
+            "address": "0x2046aa63bfb03f393ad85a518011fdf8af3ddb53"
+          },
+          {
+            "index": 31,
+            "address": "0x33143eb14ad89eea5fe2885366c7d09152623ff7"
+          },
+          {
+            "index": 32,
+            "address": "0x81bc837db80a6be0b5226ebf7c07f131369951c4"
+          },
+          {
+            "index": 33,
+            "address": "0xb79f20521c577c4aa7625bd2289f00e7c0e83cf3"
+          },
+          {
+            "index": 34,
+            "address": "0x04e975d2d6ec301b566487216be1e4d88cad07d7"
+          },
+          {
+            "index": 35,
+            "address": "0xba1c6303032df7aa398c5cc386f3bdb28b6c5660"
+          },
+          {
+            "index": 36,
+            "address": "0xce8a040e972e4781e1809d4552a829ecd438d372"
+          },
+          {
+            "index": 37,
+            "address": "0xee70c7e14823c67b8e642f0136408cc3fc8c8359"
+          },
+          {
+            "index": 38,
+            "address": "0xc7a0bff8a1eff0111e1bb8fc2c372cee162c578a"
+          },
+          {
+            "index": 39,
+            "address": "0xca6fa40e0b548aba9132f3f5050ee4c4c5eb7340"
+          }
+        ]
+      },
+      "bnb": {
+        "chain": "BNB Smart Chain",
+        "chainId": 56,
+        "factory": "0x68224f668083c29e9800be2a646d42d18cedf7e2",
+        "processors": [
+          {
+            "index": 0,
+            "address": "0x50a994e71615474b55559ff4f500928fbc339dd9"
+          },
+          {
+            "index": 1,
+            "address": "0x1f5cb4aeae1807bf60c3b9c0d8adbcc14e91f12c"
+          },
+          {
+            "index": 2,
+            "address": "0xc1ae0d87cde4f93bcae38c6d62a269c76d5d3215"
+          },
+          {
+            "index": 3,
+            "address": "0x35657ebcee35d7850af829786876619c6f99d1d7"
+          },
+          {
+            "index": 4,
+            "address": "0x564b4b4cc92e7cb83f415ff21a9d49cd4f61baff"
+          },
+          {
+            "index": 5,
+            "address": "0xb75c36c7f0fc9409613947ad700d629e82ad59e5"
+          },
+          {
+            "index": 6,
+            "address": "0xddab9ec73e07e96b1b000b5d84d60199a2ff0abd"
+          },
+          {
+            "index": 7,
+            "address": "0x372c8f7691f1a9fcc456697f56d37461173d9402"
+          },
+          {
+            "index": 8,
+            "address": "0x5ef5701f7d5cec5c897228e643faa0d403764587"
+          },
+          {
+            "index": 9,
+            "address": "0xd34779c4ae421eb82253cf2406122b2a13c6222f"
+          },
+          {
+            "index": 10,
+            "address": "0x11c0f64c2424cf80ed537de1f875583de5d17e61"
+          },
+          {
+            "index": 11,
+            "address": "0x48532a1a204c2b225766e81309c9e15ed12bf9ff"
+          },
+          {
+            "index": 12,
+            "address": "0x16998660fc46678ff95aaedd0c5255fdfbe2d436"
+          },
+          {
+            "index": 13,
+            "address": "0x0572fa34303bb26dfe106d5c57c5bec153ec0849"
+          },
+          {
+            "index": 14,
+            "address": "0xb3e0b87088d3b385f148c181de2832dba5568817"
+          },
+          {
+            "index": 15,
+            "address": "0x62d2b6ff0319b774fef727b1eeddb9d6918701ae"
+          },
+          {
+            "index": 16,
+            "address": "0x7a920bbda272e1b72924392861c5c2f8c314275d"
+          },
+          {
+            "index": 17,
+            "address": "0xebf972f1eeab9af2a40fe91515d44943662b3599"
+          },
+          {
+            "index": 18,
+            "address": "0xd89bb9b167853769abdd714a949214a48a6f16f8"
+          },
+          {
+            "index": 19,
+            "address": "0xbfc8c4cbfdc0f04b6d3ec35bd7701f5083926962"
+          },
+          {
+            "index": 20,
+            "address": "0xca8b3a606587f7b7373b3e839e2ed544acf9d4ec"
+          },
+          {
+            "index": 21,
+            "address": "0x6938773db594f57eb7efc051df75b5647ba23596"
+          },
+          {
+            "index": 22,
+            "address": "0xbda00b12b6427281a30b408c6c77e85a0b40dd90"
+          },
+          {
+            "index": 23,
+            "address": "0x592bdc58e18c0410760d42bb192370aa2465b28f"
+          },
+          {
+            "index": 24,
+            "address": "0x79e562a81055b4c7d1e8953fe4ecbbe4c88b583d"
+          },
+          {
+            "index": 25,
+            "address": "0x327927e644f197ed52d9b50054ac523d737c761d"
+          },
+          {
+            "index": 26,
+            "address": "0x8e172840b4d0b445f9f77a41d2923dd5c6d4d052"
+          },
+          {
+            "index": 27,
+            "address": "0x877e79f8ef58af57fe3abd8a5aa37e3184d03c78"
+          },
+          {
+            "index": 28,
+            "address": "0x1aeacdb50fa2e50d53de88ffefa4cf6caed64e8e"
+          },
+          {
+            "index": 29,
+            "address": "0xd1944052a046c2dfe743735ab8b9600229ef686a"
+          },
+          {
+            "index": 30,
+            "address": "0xb1024b89886b9a34aa4ff5f31c411d708b20a14c"
+          },
+          {
+            "index": 31,
+            "address": "0x6b76005f7c35e2df9cdaa345d06190af3f5a8041"
+          },
+          {
+            "index": 32,
+            "address": "0xebe3e1b3d49fa97b662a2f37558d5d4521366c46"
+          },
+          {
+            "index": 33,
+            "address": "0x49181fe09501babe5c23cbc001d0e77c1cfbdae7"
+          },
+          {
+            "index": 34,
+            "address": "0x52d987c5430725f8505956c84a7d3f72231ef339"
+          },
+          {
+            "index": 35,
+            "address": "0x21b5a05355b2ac55571a5da73fa432ba548caaeb"
+          },
+          {
+            "index": 36,
+            "address": "0xe4294a100e081ff3f840736a41c2185e4f98af4a"
+          },
+          {
+            "index": 37,
+            "address": "0x538f6cebcfcaa23e440bd2a4c4b17cf941ed2dfc"
+          },
+          {
+            "index": 38,
+            "address": "0x6b28de4a82fb4ec88070f145c5d12d0435158e68"
+          },
+          {
+            "index": 39,
+            "address": "0xf3bd1fa726f716b5e6b3556385df8cd3dfdd4e94"
+          }
+        ]
+      },
+      "base": {
+        "chain": "Base",
+        "chainId": 8453,
+        "factory": "0x1f09daefa827f02cbb40967cc91b259763760761",
+        "processors": [
+          {
+            "index": 0,
+            "address": "0x839bdd6fa7a66416a609a735e11de5411b98574e"
+          },
+          {
+            "index": 1,
+            "address": "0x0565ea48ca41ae559d8d491dbb0a9ec945db551b"
+          },
+          {
+            "index": 2,
+            "address": "0xe0ef4fffd869cbd24b2f83e6d2d83109937e05ff"
+          },
+          {
+            "index": 3,
+            "address": "0x006b107b889347dedd52019fae9daa60fce47947"
+          },
+          {
+            "index": 4,
+            "address": "0x68f65046fdeab90d8db376c27b5e6ae159d240cc"
+          },
+          {
+            "index": 5,
+            "address": "0xfd7b31b5a307b0c863772bb162e10d2eb4b7a819"
+          },
+          {
+            "index": 6,
+            "address": "0x90b3ba18c32e9e9e6ea5e2cca3e68b86afbe7cdb"
+          },
+          {
+            "index": 7,
+            "address": "0xd11e62a6231c101add91a10f6c2b406d2d1f043b"
+          },
+          {
+            "index": 8,
+            "address": "0xfd32fbaeef90726f00aafdf2d2cf3d9c6fbd6b8d"
+          },
+          {
+            "index": 9,
+            "address": "0x6a5bfc4147b3aaa23bd494789417309f8a64fd91"
+          },
+          {
+            "index": 10,
+            "address": "0x5ca58d1ee9babf7c716e55a37a6f2e780250a1ba"
+          },
+          {
+            "index": 11,
+            "address": "0xfb6c4359b3624dd58ffe3ed5d34dbade2782f843"
+          },
+          {
+            "index": 12,
+            "address": "0x10af08dc3a03076d6e58054392c357ba22873c24"
+          },
+          {
+            "index": 13,
+            "address": "0x5c44c6b4dd5ef1f5cf49bff0dc282f5d7ad2a783"
+          },
+          {
+            "index": 14,
+            "address": "0x9775618366492484d6b731ee6c8ee12c3c879cfc"
+          },
+          {
+            "index": 15,
+            "address": "0xecfcccd10a2993ad73eddda3f88a767c89508331"
+          },
+          {
+            "index": 16,
+            "address": "0xc87e52ee14a51b6ec9ddcb23a9c0aaf498515123"
+          },
+          {
+            "index": 17,
+            "address": "0xd041714faffea320cc83d769c37608b00601b76f"
+          },
+          {
+            "index": 18,
+            "address": "0x073ce99d5fe01293d539bc1c3a45434a7d1f4f85"
+          },
+          {
+            "index": 19,
+            "address": "0x9eecbef7401c4fe0515a483ddb5a995347ac7bb7"
+          },
+          {
+            "index": 20,
+            "address": "0xc3c6454ea8c5d9f1bf0fddbd3efe111d58e08d07"
+          },
+          {
+            "index": 21,
+            "address": "0x07bbcc317a7cb3574817510f49ea0999b12a5e63"
+          },
+          {
+            "index": 22,
+            "address": "0x88dfb0a852cc0af484c2f50f3e754ff351563e6a"
+          },
+          {
+            "index": 23,
+            "address": "0x4137a3c88761745642749f63d45b821abaf9c454"
+          },
+          {
+            "index": 24,
+            "address": "0x380b7b3f8e28c3d71ee1db78b6f0bf9ca914d87d"
+          },
+          {
+            "index": 25,
+            "address": "0xa78147b643d2a5e7f432d405f9f528dca3ee2aa4"
+          },
+          {
+            "index": 26,
+            "address": "0x9dc72fc28a0a1b3c378dc59b6a3192cb0c578ba4"
+          },
+          {
+            "index": 27,
+            "address": "0x2a6a6182d1cc7ed7d8e190a151381ba3fec9d79f"
+          },
+          {
+            "index": 28,
+            "address": "0xc99149860ff3987727466311930a3987968385c0"
+          },
+          {
+            "index": 29,
+            "address": "0x526b96238cc418d909005e2e2d79e327da4bd0f7"
+          },
+          {
+            "index": 30,
+            "address": "0x2046aa63bfb03f393ad85a518011fdf8af3ddb53"
+          },
+          {
+            "index": 31,
+            "address": "0x33143eb14ad89eea5fe2885366c7d09152623ff7"
+          },
+          {
+            "index": 32,
+            "address": "0x81bc837db80a6be0b5226ebf7c07f131369951c4"
+          },
+          {
+            "index": 33,
+            "address": "0xb79f20521c577c4aa7625bd2289f00e7c0e83cf3"
+          },
+          {
+            "index": 34,
+            "address": "0x04e975d2d6ec301b566487216be1e4d88cad07d7"
+          },
+          {
+            "index": 35,
+            "address": "0xba1c6303032df7aa398c5cc386f3bdb28b6c5660"
+          },
+          {
+            "index": 36,
+            "address": "0xce8a040e972e4781e1809d4552a829ecd438d372"
+          },
+          {
+            "index": 37,
+            "address": "0xee70c7e14823c67b8e642f0136408cc3fc8c8359"
+          },
+          {
+            "index": 38,
+            "address": "0xc7a0bff8a1eff0111e1bb8fc2c372cee162c578a"
+          },
+          {
+            "index": 39,
+            "address": "0xca6fa40e0b548aba9132f3f5050ee4c4c5eb7340"
+          }
+        ]
+      }
+    },
+    "sites": [
+      {
+        "name": "4246.0.tape",
+        "status": "ok",
+        "chain": null,
+        "container": "0x86ddaef00401e3f10418398d67d7189fc458ea95",
+        "cpu": "0",
+        "cpuName": "Genesis CPU",
+        "tokenId": "4246",
+        "holder": "0x571d447f4f24688ec35ccf07f1d6993655f6af15",
+        "block": "133211865",
+        "paths": [
+          "index.html"
+        ],
+        "fallback": "index.html",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 19770,
+            "kernelVerified": true,
+            "declaredSha256": "0x275c896aa347670b19e8ed11256165dbabadb0f9e3c947370b591130acb507b8",
+            "independentSha256": "0x275c896aa347670b19e8ed11256165dbabadb0f9e3c947370b591130acb507b8",
+            "independentMatch": true
+          }
+        ],
+        "allVerified": true
+      },
+      {
+        "name": "2.2.0.tape",
+        "status": "ok",
+        "chain": null,
+        "container": "0x25b20d3ea6b207506340eab2eb0f45edc800f6b3",
+        "cpu": "0",
+        "cpuName": "OnlyTestXLayer",
+        "tokenId": "2",
+        "holder": "0x571d447f4f24688ec35ccf07f1d6993655f6af15",
+        "block": "75740832",
+        "paths": [
+          "index.html"
+        ],
+        "fallback": "index.html",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 26993,
+            "kernelVerified": true,
+            "declaredSha256": "0xe0f21c08c2ad09d3818d39c802153d33b6931311300d7419228d98da0a8300f0",
+            "independentSha256": "0xe0f21c08c2ad09d3818d39c802153d33b6931311300d7419228d98da0a8300f0",
+            "independentMatch": true
+          }
+        ],
+        "allVerified": true
+      },
+      {
+        "name": "1.2.2.tape",
+        "status": "ok",
+        "chain": null,
+        "container": "0xfe3218367d05c32654cf9b60c82c39c2bef448f2",
+        "cpu": "2",
+        "cpuName": "Xehemoth",
+        "tokenId": "1",
+        "holder": "0x1cc445da5d717fe8648b0d161dd8ba395a75077a",
+        "block": "75740836",
+        "paths": [
+          "index.html"
+        ],
+        "fallback": "index.html",
+        "files": [
+          {
+            "path": "index.html",
+            "bytes": 37514,
+            "kernelVerified": true,
+            "declaredSha256": "0x945cdb28ed21348169616d8514ccbb059eada4741c1b3a296cc1dba23f78b2d2",
+            "independentSha256": "0x945cdb28ed21348169616d8514ccbb059eada4741c1b3a296cc1dba23f78b2d2",
+            "independentMatch": true
+          }
+        ],
+        "allVerified": true
+      }
+    ]
+  },
+  "pack": {
+    "format": "tapeforge-site-bundle/1",
+    "spec": "tape:// On-Chain Website Specification v0.2 (TapeKit SPEC.md)",
+    "fallback": "index.html",
+    "fileCount": 1,
+    "totalBytes": 2556,
+    "files": [
+      {
+        "path": "index.html",
+        "bytes": 2556,
+        "sha256": "0xe8534ff7e2ad7d6d25a2bdc846c0a2a9dcb8c2eaf7e63dd9679a8a64e4664159",
+        "contentType": "text/html"
+      }
+    ],
+    "pure": true,
+    "externalRefs": []
+  }
+}

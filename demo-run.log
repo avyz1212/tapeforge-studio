@@ -1,0 +1,51 @@
+
+> tapeforge-studio@0.1.0 demo
+> node src/cli.mjs demo
+
+
+=== CIRCUIT LAB — NAND/LATCH netlists, exhaustively verified ===
+PASS  xor2             NAND×4 LATCH×0  (truth-table, 4 rows)
+PASS  half_adder       NAND×15 LATCH×0  (truth-table, 4 rows)
+PASS  full_adder       NAND×15 LATCH×0  (truth-table, 8 rows)
+PASS  adder4           NAND×60 LATCH×0  (truth-table, 512 rows)
+PASS  alu4             NAND×173 LATCH×0  (truth-table, 1024 rows)
+PASS  threshold_3of5   NAND×41 LATCH×0  (truth-table, 32 rows)
+PASS  majority3        NAND×12 LATCH×0  (truth-table, 8 rows)
+PASS  counter4         NAND×24 LATCH×4  (sequence, 20 rows)
+
+=== LIVE CHAIN LENS — real TapeOut data via the official TapeKit kernel ===
+X Layer (chainId 196) factory 0x1f09daefa827f02cbb40967cc91b259763760761: 40 processors found
+   cpu 0: 0x839bdd6fa7a66416a609a735e11de5411b98574e
+   cpu 1: 0x0565ea48ca41ae559d8d491dbb0a9ec945db551b
+   cpu 2: 0xe0ef4fffd869cbd24b2f83e6d2d83109937e05ff
+   cpu 3: 0x006b107b889347dedd52019fae9daa60fce47947
+   … and 36 more
+BNB Smart Chain (chainId 56) factory 0x68224f668083c29e9800be2a646d42d18cedf7e2: 40 processors found
+   cpu 0: 0x50a994e71615474b55559ff4f500928fbc339dd9
+   cpu 1: 0x1f5cb4aeae1807bf60c3b9c0d8adbcc14e91f12c
+   cpu 2: 0xc1ae0d87cde4f93bcae38c6d62a269c76d5d3215
+   cpu 3: 0x35657ebcee35d7850af829786876619c6f99d1d7
+   … and 36 more
+Base (chainId 8453) factory 0x1f09daefa827f02cbb40967cc91b259763760761: 40 processors found
+   cpu 0: 0x839bdd6fa7a66416a609a735e11de5411b98574e
+   cpu 1: 0x0565ea48ca41ae559d8d491dbb0a9ec945db551b
+   cpu 2: 0xe0ef4fffd869cbd24b2f83e6d2d83109937e05ff
+   cpu 3: 0x006b107b889347dedd52019fae9daa60fce47947
+   … and 36 more
+4246.0.tape -> ok container 0x86ddaef00401e3f10418398d67d7189fc458ea95 (Genesis CPU) @block 133211865
+   index.html: 19770 bytes, kernelVerified=true, independentSHA256 match=true
+2.2.0.tape -> ok container 0x25b20d3ea6b207506340eab2eb0f45edc800f6b3 (OnlyTestXLayer) @block 75740832
+   index.html: 26993 bytes, kernelVerified=true, independentSHA256 match=true
+1.2.2.tape -> ok container 0xfe3218367d05c32654cf9b60c82c39c2bef448f2 (Xehemoth) @block 75740836
+   index.html: 37514 bytes, kernelVerified=true, independentSHA256 match=true
+
+=== SITE PACKAGER — DeWEB bundle per the tape:// specification ===
+packaged 1 files, 2556 bytes, fallback=index.html
+100% on-chain purity: YES — no external references
+   index.html  2556B  sha256 0xe8534ff7e2ad7d6d25a2bdc846c0a2a9dcb8c2eaf7e63dd9679a8a64e4664159
+
+=== SUMMARY ===
+circuit lab: ALL PASS
+live lens:   live TapeOut sites fetched & SHA-256 verified on BNB Chain / X Layer; hash mismatches: none
+site bundle: pure, DeWEB-ready
+evidence:    evidence.json + report.html written
